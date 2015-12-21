@@ -1,14 +1,18 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="button.js"></script>
 </head>
 
 <title>Button | Bomb helper</title>
 <body>
+<div id="answer"><h2>Choose button colour and text</h2></div>
+
 <h1>Button</h1>
-<h3>Colour</h3>
+<A HREF="javascript:history.go(0)">Reload</A>
+<h3>Colour of button</h3>
 <h4>If the colour is not listed here, don't select anything, or select "other"</h4>
-<form action="">
+<form class="detail" action="">
 <input type="radio" name="COLOUR" value="red">RED<br>
 <input type="radio" name="COLOUR" value="blue">BLUE<br>
 <input type="radio" name="COLOUR" value="green">GREEN<br>
@@ -18,15 +22,32 @@
 </form>
 
 
-<h3>TEXT</h3>
+<h3>TEXT ON BUTTON</h3>
 <h4>If the text is not listed here, don't select anything, or select "other"</h4>
-<form action="">
+<form class="detail" action="">
 <input type="radio" name="TEXT" value="abort">ABORT<br>
 <input type="radio" name="TEXT" value="detonate">DETONATE<br>
-<input type="radio" name="TEXT" value="green">HOLD<br>
+<input type="radio" name="TEXT" value="hold">HOLD<br>
 <input type="radio" name="TEXT" value="other">other<br>
 </form>
 
+<br>
+<h4 class="batteries">How many batteries are on the bomb?</h4>
+<form class="detail batteries" action="">
+<input type="radio" name="batteries" value="zero">None?<br>
+<input type="radio" name="batteries" value="one">One?<br> 
+<input type="radio" name="batteries" value="two">Two?<br> 
+<input type="radio" name="batteries" value="many">More than two?<br> 
+<input type="radio" name="batteries" value="other">No Idea?<br> 
+</form>
+
+<br><br>
+<form class="detail" id="indicators" action="">
+<div id="carlabel"><input id="carcheckbox" type="checkbox" name="HAZMO" value="CAR">Is the label <b>CAR</b> with a lit indicator on the bomb?<br></div>
+<div id="frklabel"><input id="frkcheckbox" type="checkbox" name="HAZMO" value="FRK">Is the label <b>FRK</b> with a lit indicator on the bomb?<br></div>
+</form>
+
+<div id="debug"></div>
 
 
 </body>
