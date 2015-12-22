@@ -1,0 +1,30 @@
+body.bomb-helper-main-body 
+{
+    background-image: url("background.png");
+}
+
+img.bomb-helper-challenge-logo
+{
+	display: block;
+	margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: auto;
+}
+
+table.bomb-helper-options
+{
+	margin-top: 8%;
+}
+
+table.bomb-helper-options-table td
+{
+	padding-right: 25px;
+	height: 55px;
+}
+
+img.bomb-helper-selected
+{ 
+   border:1px solid #021a40;
+}
