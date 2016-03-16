@@ -73,7 +73,7 @@ var selectLabel = function(label)
 	}
 	
 	if(label == "car"){
-		if(carLabel == "false"){
+		if(carLabel != "true"){
 			carLabel = "true";
 		} else {
 			carLabel = "false";
@@ -82,7 +82,7 @@ var selectLabel = function(label)
 	}
 	
 	if(label = "frk"){
-		if(frkLabel == "false"){
+		if(frkLabel != "true"){
 			frkLabel = "true";
 		} else {
 			frklabel = "false";
@@ -156,8 +156,11 @@ $(document).ready(function(){
 			answerfound = "true";
 		}
 		
-		if(selectedColor != "none" && selectedText != "none" && answerfound == false))
+		if(selectedColor != "none" && selectedText != "none" && answerfound == false){
 			$("#answer").html(holdanswer);
+		}
+		
+		//$("#debug").html(selectedColor+" "+selectedText+" "+selectedBatteries+" car="+carLabel+" frk="+frkLabel);
 	});
 });
 
