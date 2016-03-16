@@ -133,7 +133,7 @@ $(document).ready(function(){
 		}
 		
 		if(answerfound == false && selectedColor == "white" && selectedText != "none"){
-			if(selectedLabel == "none"){
+			if(carLabel == "none"){
 				$("#answer").html(carhint);
 				answerfound = "true";
 			}
