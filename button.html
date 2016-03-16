@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="button.js"></script>
 
 
@@ -19,11 +20,11 @@
 			<tr>
 				<table class="bomb-helper-options-table">
 					<tr>
-						<td><img src="red.png" id="color-red" onclick="optionSelected(id)"/></td>
-						<td><img src="white.png" id="color-white" onclick="optionSelected(id)"/></td>
-						<td><img src="blue.png" id="color-blue" onclick="optionSelected(id)"/></td>
-						<td><img src="yellow.png" id="color-yellow" onclick="optionSelected(id)"/></td>
-						<td><img src="other.png" id="color-other" onclick="optionSelected(id)"/></td>
+						<td><img src="red.png" class="puzzle-info" id="color-red" onclick="optionSelected(id)"/></td>
+						<td><img src="white.png" class="puzzle-info" id="color-white" onclick="optionSelected(id)"/></td>
+						<td><img src="blue.png" class="puzzle-info" id="color-blue" onclick="optionSelected(id)"/></td>
+						<td><img src="yellow.png" class="puzzle-info" id="color-yellow" onclick="optionSelected(id)"/></td>
+						<td><img src="other.png" class="puzzle-info" id="color-other" onclick="optionSelected(id)"/></td>
 					</tr>
 				</table>
 			</tr>
@@ -35,10 +36,10 @@
 			<tr>
 				<table class="bomb-helper-options-table">
 					<tr>
-						<td><img src="abort.png" id="text-abort" onclick="optionSelected(id)"/></td>
-						<td><img src="detonate.png" id="text-detonate" onclick="optionSelected(id)"/></td>
-						<td><img src="hold.png" id="text-hold" onclick="optionSelected(id)"/></td>
-						<td><img src="other.png" id="text-other" onclick="optionSelected(id)"/></td>
+						<td><img src="abort.png" class="puzzle-info" id="text-abort" onclick="optionSelected(id)"/></td>
+						<td><img src="detonate.png" class="puzzle-info" id="text-detonate" onclick="optionSelected(id)"/></td>
+						<td><img src="hold.png" class="puzzle-info" id="text-hold" onclick="optionSelected(id)"/></td>
+						<td><img src="other.png" class="puzzle-info" id="text-other" onclick="optionSelected(id)"/></td>
 					</tr>
 				</table>	
 			</tr>
@@ -50,9 +51,9 @@
 			<tr>
 				<table class="bomb-helper-options-table">
 					<tr>
-						<td><img src="none.png" id="batteries-0" onclick="optionSelected(id)"/></td>
-						<td><img src="more-than-1.png" id="batteries-1" onclick="optionSelected(id)"/></td>
-						<td><img src="more-than-2.png" id="batteries-2" onclick="optionSelected(id)"/></td>
+						<td><img src="none.png" class="puzzle-info" id="batteries-0" onclick="optionSelected(id)"/></td>
+						<td><img src="more-than-1.png" class="puzzle-info" id="batteries-1" onclick="optionSelected(id)"/></td>
+						<td><img src="more-than-2.png" class="puzzle-info" id="batteries-2" onclick="optionSelected(id)"/></td>
 					</tr>
 				</table>
 			</tr>
@@ -64,16 +65,21 @@
 			<tr>
 				<table class="bomb-helper-options-table">
 					<tr>
-						<td><img src="none.png" id="label-none" onclick="optionSelected(id)"/></td>
-						<td><img src="car.png" id="label-car" onclick="optionSelected(id)"/></td>
-						<td><img src="frk.png" id="label-frk" onclick="optionSelected(id)"/></td>
+						<td><img src="none.png" class="puzzle-info" id="label-blank" onclick="optionSelected(id)"/></td>
+						<td><img src="car.png" class="puzzle-info" id="label-car" onclick="optionSelected(id)"/></td>
+						<td><img src="frk.png" class="puzzle-info" id="label-frk" onclick="optionSelected(id)"/></td>
 					</tr>
 				</table>	
 			</tr>
 
 		</table>
 
-	</body>
+		<div id="answer"><h2>Choose button colour and text</h2></div>
+		
+		</body>
+
+<!--
+		
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -128,3 +134,5 @@
 
 </body>
 </html>
+
+-->
