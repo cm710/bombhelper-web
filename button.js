@@ -81,7 +81,7 @@ var selectLabel = function(label)
 		
 	}
 	
-	if(label = "frk"){
+	if(label == "frk"){
 		if(frkLabel != "true"){
 			frkLabel = "true";
 		} else {
@@ -160,7 +160,7 @@ $(document).ready(function(){
 			$("#answer").html(holdanswer);
 		}
 		
-		//$("#debug").html(selectedColor+" "+selectedText+" "+selectedBatteries+" car="+carLabel+" frk="+frkLabel);
+		$("#debug").html(selectedColor+" "+selectedText+" "+selectedBatteries+" car="+carLabel+" frk="+frkLabel);
 	});
 });
 
