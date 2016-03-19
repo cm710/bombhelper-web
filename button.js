@@ -34,6 +34,24 @@ var puzzleReset = function()
 	carLabel = "none"
 	frkLabel = "none"
 	selectedBatteries = "none";
+	
+	$("#color-red").attr("src", "buttons\/red.png");
+	$("#color-blue").attr("src", "buttons\/blue.png");
+	$("#color-white").attr("src", "buttons\/white.png");
+	$("#color-yellow").attr("src", "buttons\/yellow.png");
+	$("#color-other").attr("src", "buttons\/other.png");
+	
+	$("#text-abort").attr("src", "buttons\/abort.png");
+	$("#text-detonate").attr("src", "buttons\/detonate.png");
+	$("#text-hold").attr("src", "buttons\/hold.png");
+	$("#text-other").attr("src", "buttons\/other_text.png");
+	
+	$("#batteries-3").attr("src", "buttons\/mt2.png");
+	$("#batteries-2").attr("src", "buttons\/two.png");
+	$("#batteries-0").attr("src", "buttons\/lt2.png");
+	
+	$("#label-frk").attr("src", "buttons\/frk_false.png");
+	$("#label-car").attr("src", "buttons\/car_false.png");
 }
 
 var selectColor = function(color)
@@ -178,6 +196,88 @@ $(document).ready(function(){
 		
 		$("#debug").html(selectedColor+" "+selectedText+" "+selectedBatteries+" car="+carLabel+" frk="+frkLabel);
 	});
+	
+	$(".color").click(function(){
+		$("#color-red").attr("src", "buttons\/red.png");
+		$("#color-blue").attr("src", "buttons\/blue.png");
+		$("#color-white").attr("src", "buttons\/white.png");
+		$("#color-yellow").attr("src", "buttons\/yellow.png");
+		$("#color-other").attr("src", "buttons\/other.png");
+		
+		switch(selectedColor){
+			case "red":
+				$("#color-red").attr("src", "buttons/red_pressed.png");
+				break;
+			case "white":
+				$("#color-white").attr("src", "buttons/white_pressed.png");
+				break;
+			case "blue":
+				$("#color-blue").attr("src", "buttons/blue_pressed.png");
+				break;
+			case "yellow":
+				$("#color-yellow").attr("src", "buttons/yellow_pressed.png");
+				break;
+			case "other":
+				$("#color-other").attr("src", "buttons/other_pressed.png");
+				break;
+		}
+	});
+	
+	$(".text").click(function(){
+		$("#text-abort").attr("src", "buttons\/abort.png");
+		$("#text-detonate").attr("src", "buttons\/detonate.png");
+		$("#text-hold").attr("src", "buttons\/hold.png");
+		$("#text-other").attr("src", "buttons\/other_text.png");
+		
+		switch(selectedText){
+			case "abort":
+				$("#text-abort").attr("src", "buttons\/abort_pressed.png");
+				break;
+			case "detonate":
+				$("#text-detonate").attr("src", "buttons\/detonate_pressed.png");
+				break;
+			case "hold":
+				$("#text-hold").attr("src", "buttons\/hold_pressed.png");
+				break;
+			case "other":
+				$("#text-other").attr("src", "buttons\/other_text_pressed.png");
+				break;
+		}
+	});
+	
+	$(".battery").click(function(){
+		$("#batteries-3").attr("src", "buttons\/mt2.png");
+		$("#batteries-2").attr("src", "buttons\/two.png");
+		$("#batteries-0").attr("src", "buttons\/lt2.png");
+		
+		switch(selectedBatteries) {
+			case "0":
+				$("#batteries-0").attr("src", "buttons\/lt2_pressed.png");
+				break;
+			case "2":
+				$("#batteries-2").attr("src", "buttons\/two_pressed.png");
+				break;
+			case "3":
+				$("#batteries-3").attr("src", "buttons\/mt2_pressed.png");
+				break;
+		}
+		
+	});
+	
+	$(".label").click(function(){
+		$("#label-frk").attr("src", "buttons\/frk_false.png");
+		$("#label-car").attr("src", "buttons\/car_false.png");
+		
+		if(carLabel == "true"){
+			$("#label-car").attr("src", "buttons\/car.png");
+		}
+		
+		if(frkLabel == "true"){
+			$("#label-frk").attr("src", "buttons\/frk.png");
+		}
+		
+	});
+	
 });
 
 /*$(document).ready(function(){
