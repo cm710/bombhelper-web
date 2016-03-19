@@ -116,11 +116,16 @@ var selectLabel = function(label)
 }*/
 
 $(document).ready(function(){
+	var initanswertext = "<h2>Choose button colour and text</h2>"
 	var tapanswer = "<h2>Press and immediately release the button</h2>"
 	var holdanswer = '<h2>Press and HOLD the button<br> If the label is <font color="blue">BLUE</font> release when there is a 4 on the counter<br> If the label is <font color="yellow">YELLOW</font> release when there is a 5 on the counter<br> Otherwise release when there is a 1 on the counter</h2>'
 	var batteryhint = '<h2>Check number of batteries</h2>'
 	var carhint = '<h2>Check if there is a lit indicator with <b>CAR</b> on it</h2>'
 	var frkhint = '<h2>Check for a <b>FRK</b> label on the side and for the number of batteries</h2>'
+	
+	$(".puzzle-reset").click(function(){
+		$("#answer").html(initanswertext);
+	});
 	
 	$(".puzzle-info").click(function(){
 		var answerfound = false;
