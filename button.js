@@ -26,6 +26,16 @@ var optionSelected = function(optionId)
 	}
 }
 
+var puzzleReset = function()
+{
+	selectedColor = "none";
+	selectedText = "none";
+	selectedLabel = "none";
+	carLabel = "none"
+	frkLabel = "none"
+	selectedBatteries = "none";
+}
+
 var selectColor = function(color)
 {
 	var element = document.getElementById("color-" + selectedColor);
@@ -85,11 +95,12 @@ var selectLabel = function(label)
 		if(frkLabel != "true"){
 			frkLabel = "true";
 		} else {
-			frklabel = "false";
+			frkLabel = "false";
 		}
 		
 	}
 }
+
 
 /*var selectLabel = function(label)
 {
